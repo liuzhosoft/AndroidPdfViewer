@@ -1,0 +1,3 @@
+[submodule "PdfiumAndroid"]
+	path = PdfiumAndroid
+	url = git@github.com:liuzhosoft/PdfiumAndroid.git

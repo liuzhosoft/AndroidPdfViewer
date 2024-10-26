@@ -5,14 +5,14 @@ plugins {
 android {
     namespace "com.github.barteksc.sample"
 
-    compileSdk rootProject.tools.compileSdk
+    compileSdk rootProject.ext.compileSdkVersion
 
     defaultConfig {
-        minSdk rootProject.tools.minSdk
-        targetSdk rootProject.tools.targetSdk
+        minSdk rootProject.ext.minSdkVersion
+        targetSdk rootProject.ext.targetSdkVersion
 
         versionCode 3
-        versionName "${rootProject.tools.versionName}"
+        versionName "1.0.0"
 
         javaCompileOptions {
             annotationProcessorOptions {
@@ -23,9 +23,8 @@ android {
 }
 
 dependencies {
-    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.appcompat:appcompat:1.7.0'
     implementation project(':android-pdf-viewer')
-//    implementation 'com.github.lion1988dev:AndroidPdfViewer:3.2.1'
 
     implementation 'org.androidannotations:androidannotations-api:4.6.0'
 
