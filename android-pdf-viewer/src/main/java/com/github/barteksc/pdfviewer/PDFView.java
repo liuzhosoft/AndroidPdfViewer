@@ -36,6 +36,8 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.widget.RelativeLayout;
 
+import androidx.annotation.Nullable;
+
 import com.github.barteksc.pdfviewer.exception.PageRenderingException;
 import com.github.barteksc.pdfviewer.link.DefaultLinkHandler;
 import com.github.barteksc.pdfviewer.link.LinkHandler;
@@ -325,6 +327,11 @@ public class PDFView extends RelativeLayout {
         // Start decoding document
         decodingAsyncTask = new DecodingAsyncTask(docSource, password, userPages, this, pdfiumCore);
         decodingAsyncTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+    }
+
+    @Nullable
+    public PdfFile getPdfFile() {
+        return pdfFile;
     }
 
     /**
